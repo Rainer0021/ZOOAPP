@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta ZOOAPP -->
+    <color name="zoo_green_primary">#2E7D32</color>
+    <color name="zoo_green_dark">#1B5E20</color>
+    <color name="zoo_green_light">#E8F5E9</color>
+    <color name="zoo_orange_accent">#E65100</color>
+    <color name="zoo_bg">#F4F6F0</color>
+
+    <!-- Estados de Alerta -->
+    <color name="alert_ok_bg">#E8F5E9</color>
+    <color name="alert_ok_text">#2E7D32</color>
+    <color name="alert_danger_bg">#FFEBEE</color>
+    <color name="alert_danger_text">#C62828</color>
+</resources>

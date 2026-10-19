@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zoo_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Selección de Conexión y Animal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selección de Sensor y Animal"
+                android:textColor="@color/zoo_green_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spDevices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <Spinner
+                android:id="@+id/spSelectAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnFetchCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/zoo_green_primary"
+                android:text="Consultar Estado del Hábitat"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Estado y Calibración mediante Barras Deslizables -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCurrentStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecciona la especie y presiona consultar."
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAlertMonitorStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_alert_ok"
+                android:padding="12dp"
+                android:text="Sin estado evaluado."
+                android:textColor="@color/alert_ok_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Calibración por Barras Deslizables"
+                android:textColor="@color/zoo_orange_accent"
+                android:textStyle="bold" />
+
+            <!-- Slider Temperatura (0.0°C a 50.0°C) -->
+            <TextView
+                android:id="@+id/tvLabelTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Temperatura a ajustar: 25.0 °C"
+                android:textColor="#333333"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:max="500"
+                android:progress="250" />
+
+            <!-- Slider Humedad (0.0% a 100.0%) -->
+            <TextView
+                android:id="@+id/tvLabelHum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Humedad a ajustar: 50.0 %"
+                android:textColor="#333333"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbHum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:max="1000"
+                android:progress="500" />
+
+            <!-- Slider CO2 (0 a 2000 ppm) -->
+            <TextView
+                android:id="@+id/tvLabelCo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="CO2 a ajustar: 600 ppm"
+                android:textColor="#333333"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbCo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:max="2000"
+                android:progress="600" />
+
+            <Button
+                android:id="@+id/btnSendUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/zoo_orange_accent"
+                android:text="Aplicar Ajuste Remoto"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Historial de Cambios -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnFetchHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/zoo_green_primary"
+                android:text="Ver Historial de Cambios"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvHistoryData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Presiona para consultar el historial de modificaciones." />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
